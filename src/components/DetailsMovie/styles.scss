@@ -29,6 +29,33 @@
       justify-content: center;
       align-items: center;
 
+      a {
+        text-decoration: none;
+
+        width: 150px;
+        height: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: none;
+        border: 1px solid #00adb5;
+        border-radius: 8px;
+
+        cursor: pointer;
+
+        color: #00adb5;
+
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background: #00adb5;
+          color: #fff;
+          transform: scale(1.2);
+        }
+      }
+
       img {
         margin: 4rem 2rem;
         height: 500px;
@@ -38,9 +65,9 @@
 
       p {
         margin-top: 1rem;
-        color: #FFF;
+        color: #fff;
         font-size: 24px;
-        
+
         span {
           color: #00adb5;
         }

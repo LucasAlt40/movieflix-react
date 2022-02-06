@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 import { axiosGet } from "../../utils";
-
-import { Skeleton } from "@mui/material";
 
 import FavoriteButton from "../FavoriteButton";
 
 import "./styles.scss";
+import { ArrowBack } from "@mui/icons-material";
+import { Skeleton } from "@mui/material";
 
 export default function DetailsMovie() {
   const { id } = useParams();
@@ -57,6 +58,9 @@ export default function DetailsMovie() {
           />
           <div className="details-content">
             <div className="extra-contents">
+              <Link to="/">
+                <ArrowBack /> Back to Home
+              </Link>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt="poster-movie"
